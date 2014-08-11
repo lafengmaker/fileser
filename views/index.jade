@@ -1,0 +1,13 @@
+extends layout
+block head
+ link(rel='stylesheet', href='/stylesheets/dashboard.css')
+block content
+  .container-fluid
+   .row
+    .main
+     h1.page-header="系统状态( 总共"+total+"  G,可用 "+free+" G )"
+     .progress
+      .progress-bar.progress-bar-warning( style="width: "+contentper*100+"%;")=contentper*100+"%"
+        .sr-only
+      .progress-bar.progress-bar-info( style="width: "+(100-contentper*100)+"%;")=100-contentper*100+"%"
+        .sr-only

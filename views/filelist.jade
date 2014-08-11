@@ -1,0 +1,26 @@
+extends layout
+block head
+ link(rel='stylesheet', href='/stylesheets/dashboard.css')
+ script(type='text/javascript' src='/javascripts/filelist.js')
+block content
+  .container-fluid
+   .row
+    .main
+     h1.page-header="目录:"+dirname+" 下文件列表"
+     .table-responsive
+      table.table.table-striped
+       thead
+        tr
+         th #
+         th 文件名称
+         th 文件大小
+         th 操作 
+       tbody
+       for mm in myfiles
+        tr
+         td &nbsp;
+         td
+          a(href='/list?name='+mm._href) #{mm._name}
+         td #{mm._size}
+         td
+          a(onclick='deletefile(this,"'+mm._href+'")' href='javascript:void(0);') 删除

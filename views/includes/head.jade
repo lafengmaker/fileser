@@ -1,0 +1,36 @@
+div(role="navigation").navbar.navbar-default.navbar-fixed-top
+ .container
+  .navbar-header
+   button(type="button" data-toggle="collapse" data-target=".navbar-collapse").navbar-toggle
+    span.sr-only Toggle navigation
+    span.icon-bar
+    span.icon-bar
+    span.icon-bar
+    span.icon-bar
+   a.navbar-brand 文件服务器
+  .navbar-collapse.collapse
+   ul.nav.navbar-nav
+    li
+     a(href='/') 主页
+    li.dropdown
+     a(data-toggle="dropdown").dropdown-toggle 文件类型
+      b.caret
+     ul.dropdown-menu
+      li
+       a 电影
+      li
+       a 音乐
+      li
+       a 图片
+      li
+       a 小说
+      li.divider
+      li.dropdown-header 其他
+      li
+       a(href='list') 浏览
+      li
+       a 搜索
+    li
+     a 关于系统
+    li
+     a 联系我们
